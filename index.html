@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zenith Tailors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #31182d;
+      color: #e0f7f4;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #49263e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 { font-family: 'Playfair Display', serif; color: #729992; }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #e0f7f4;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #729992; }
+    section { padding: 2rem; text-align: center; }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      text-align: center;
+      background-color: #31182d;
+      padding: 2rem;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      animation: fadeInDown 2s ease-out;
+    }
+    .hero p { font-size: 1.2rem; max-width: 600px; }
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      background-color: #49263e;
+      color: #f5f5f5;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover { background-color: #31182d; transform: translateY(-3px); }
+    footer {
+      background-color: #49263e;
+      color: #e0f7f4;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .buttons a { text-decoration: none; }
+    #whatsapp, #instagram {
+      position: fixed;
+      bottom: 20px;
+      z-index: 1000;
+    }
+    #whatsapp { right: 80px; }
+    #instagram { right: 20px; }
+    #whatsapp img, #instagram img {
+      width: 50px;
+      height: 50px;
+    }
+    .tailor-section {
+      background-color: #c5b3c0;
+      color: #31182d;
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .tailor-section img {
+      width: 300px;
+      border-radius: 10px;
+    }
+    .tailor-section .text {
+      flex: 1;
+    }
+    .swiper {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#31182d;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;font-family:'Playfair Display',serif;z-index:9999">
+    Stitching elegance...
+  </div>
+
+  <header>
+    <h1>Zenith</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#meet">Meet the Tailor</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home" data-aos="fade-up">
+    <h2>Crafting Elegance Since 1997</h2>
+    <p>Zenith is a premium tailor shop dedicated to providing elegant, customized traditional and modern menswear.</p>
+    <div class="buttons">
+      <a href="#services"><button>Our Services</button></a>
+      <a href="#gallery"><button>View Gallery</button></a>
+      <a href="#contact"><button>Contact Us</button></a>
+    </div>
+  </section>
+
+  <section id="services" data-aos="fade-up" style="background-color: #decbba; color: #31182d;">
+    <h2 style="font-family: 'Playfair Display', serif;">Our Services</h2>
+    <ul style="list-style: none; padding: 1rem 0;">
+      <li>• Custom Sherwanis & Ethnic Wear</li>
+      <li>• Tailored Formal Suits</li>
+      <li>• Blazers & Coats</li>
+      <li>• Kurta-Pajamas</li>
+      <li>• Measurement & Styling Consultations</li>
+    </ul>
+  </section>
+
+  <section id="gallery" data-aos="fade-up" style="background-color: #c5b3c0; color: #31182d;">
+    <h2 style="font-family: 'Playfair Display', serif;">Gallery</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image/gallery1.jpg" alt="image></div>
+        <div class="swiper-slide"><img src="image/gallery2.jpg" alt="image"></div>
+        <div class="swiper-slide"><img src="image/gallery6.jpg" alt="image"></div>
+        <div class="swiper-slide"><img src="image/gallery3.jpg" alt="image"></div>
+        <div class="swiper-slide"><img src="image/gallery4.jpg" alt="image"></div>
+        <div class="swiper-slide"><img src="image/gallery5.jpg" alt="image"></div>
+        <div class="swiper-slide"><img src="image/tailor.jpg" alt="image"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section id="meet" class="tailor-section" data-aos="fade-up">
+    <img src="image/tailor.jpg" alt="Tailor Photo">
+    <div class="text">
+      <h2>✂️ Meet the Tailor</h2>
+      <p>A legacy of craftsmanship since 1997</p>
+      <p>Zenith Tailors was established in 1997 by my father, a passionate craftsman dedicated to the art of bespoke tailoring. With an eye for precision and a deep respect for traditional techniques, he built a reputation for elegance, quality, and impeccable fit.</p>
+      <p>Today, I proudly carry forward this legacy — blending time-honored craftsmanship with modern styles and contemporary sensibilities. Every stitch we make is a tribute to the heritage of fine tailoring and the trust of generations of clients.</p>
+      <p>At Zenith, tailoring isn’t just a trade — it’s a tradition, a craft, and a story woven with care.</p>
+    </div>
+  </section>
+
+  <section id="testimonials" data-aos="fade-up" style="background-color: #decbba; color: #31182d;">
+    <h2 style="font-family: 'Playfair Display', serif;">What Our Clients Say</h2>
+    <p>“Absolutely loved the fit and finish! Will be back again.” – Arjun M.</p>
+    <p>“My wedding sherwani was a showstopper. Thank you, Zenith!” – Rohan S.</p>
+    <p>“Professional, timely and truly artistic tailoring.” – Fahad Q.</p>
+  </section>
+
+  <section id="contact" data-aos="fade-up" style="background-color: #c5b3c0; color: #31182d;">
+    <h2 style="font-family: 'Playfair Display', serif;">Contact</h2>
+    <p><strong>Address:</strong> Tagore Marg, Bohra Bazar, Neemuch Chawni, Neemuch, Madhya Pradesh 458441</p>
+    <iframe src="https://www.google.com/maps?q=Tagore+Marg,+Neemuch&output=embed" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p><strong>Email:</strong> zenith.tailors1997@gmail.com</p>
+    <p><strong>WhatsApp:</strong> +91 9926042329</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/zenith__1997" target="_blank">@zenith__1997</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Zenith Tailors. All Rights Reserved. Designed with care and tradition.</p>
+  </footer>
+
+  <a href="https://wa.me/919926042329" id="whatsapp" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+  <a href="https://instagram.com/zenith__1997" id="instagram" target="_blank">
+    <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
+    });
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
+</body>
+</html>
